@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gom="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/navigation_category"
+        android:icon="@drawable/category"
+        android:title="@string/title_category"
+        gom:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/navigation_market"
+        android:icon="@drawable/market"
+        android:title="@string/title_market"
+        gom:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="@string/title_home"
+        gom:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/navigation_bookmark"
+        android:icon="@drawable/bookmark"
+        android:title="@string/title_bookmark"
+        gom:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/navigation_mypage"
+        android:icon="@drawable/mypage"
+        android:title="@string/title_mypage"
+        gom:showAsAction="withText"/>
+</menu>
