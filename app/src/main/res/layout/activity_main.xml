@@ -39,8 +39,8 @@
             android:orientation="horizontal"
             android:layout_gravity="end">
             <ImageButton
-                android:id="@+id/shoppingCart"
-                android:src="@drawable/shoppingCart"
+                android:id="@+id/search"
+                android:src="@drawable/search"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -50,8 +50,8 @@
                 android:scaleType="fitCenter"
                 android:background="@android:color/transparent" />
             <ImageButton
-                android:id="@+id/search"
-                android:src="@drawable/search"
+                android:id="@+id/shoppingCart"
+                android:src="@drawable/shoppingCart"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
