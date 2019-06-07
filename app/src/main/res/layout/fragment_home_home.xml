@@ -3,10 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <ScrollView
+        android:id="@+id/home_home_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -14,7 +16,79 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-            
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/event_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY'S PICK"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/todaypick"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        tools:srcCompat="@tools:sample/avatars" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEW 5%"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/new5percent"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEW MARKET"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/newmarket"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
         </LinearLayout>
     </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
