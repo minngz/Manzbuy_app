@@ -51,7 +51,7 @@
                 android:background="@android:color/transparent" />
             <ImageButton
                 android:id="@+id/shoppingCart"
-                android:src="@drawable/shoppingCart"
+                android:src="@drawable/shoppingcart"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
