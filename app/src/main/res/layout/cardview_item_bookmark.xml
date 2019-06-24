@@ -15,11 +15,28 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp">
 
-        <ImageView
-            android:id="@+id/item_bookmark_image"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:background="#d2f3a5" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_bookmark_image"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#d2f3a5" />
+
+            <CheckBox
+                android:id="@+id/market_bookmark_id"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignRight="@+id/item_bookmark_image"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/market_bookmark"
+                android:button="@null"/>
+
+        </RelativeLayout>
+
 
         <TextView
             android:id="@+id/item_bookmark_marketName"
