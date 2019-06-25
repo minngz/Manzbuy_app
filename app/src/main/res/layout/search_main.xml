@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#cc424242">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/main_search_edit"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorWhite"
+            android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/main_search_edit"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/search"/>
+            <android.support.design.widget.TabLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_search_edit"
+                android:layout_marginLeft="55dp"
+                android:id="@+id/search_tab"
+                app:tabIndicatorColor="@color/colorWhite"
+                app:tabTextColor="#D8D8D8"
+                app:tabSelectedTextColor="@color/colorWhite">
+                <android.support.design.widget.TabItem
+                    android:id="@+id/search_tab_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="추천 검색어"/>
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/search_tab_recent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최근 검색어"/>
+
+            </android.support.design.widget.TabLayout>
+
+            <FrameLayout
+                android:id="@+id/search_fragment"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:layout_below="@+id/search_tab"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="3dp"></FrameLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
