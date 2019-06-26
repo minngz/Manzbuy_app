@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/main_search_edit"
                 android:layout_marginLeft="55dp"
+                android:layout_marginTop="30dp"
                 android:id="@+id/search_tab"
                 app:tabIndicatorColor="@color/colorWhite"
                 app:tabTextColor="#D8D8D8"
@@ -52,14 +53,16 @@
 
             </android.support.design.widget.TabLayout>
 
-            <FrameLayout
-                android:id="@+id/search_fragment"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/search_viewpager"
                 android:layout_width="280dp"
                 android:layout_height="280dp"
                 android:layout_below="@+id/search_tab"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginRight="3dp"></FrameLayout>
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="3dp">
+            </android.support.v4.view.ViewPager>
+
 
         </RelativeLayout>
 
