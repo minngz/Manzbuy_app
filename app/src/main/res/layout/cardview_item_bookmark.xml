@@ -27,7 +27,7 @@
                 android:layout_marginBottom="12dp"/>
 
             <CheckBox
-                android:id="@+id/market_bookmark_id"
+                android:id="@+id/item_bookmark_id"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_alignRight="@+id/item_bookmark_image"

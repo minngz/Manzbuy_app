@@ -12,25 +12,23 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class MarketFragment extends Fragment {
-
+public class BookmarkMarketFragment extends Fragment {
     private RecyclerView recyclerView;
-    private MarketRecyclerViewAdapter marketRecyclerViewAdapter;
-    private ArrayList<Market> marketArrayList;
+    private BookmarkMarketRecyclerViewAdapter marketRecyclerViewAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<BookmarkMarket> markets;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.market_fragment, container, false);
+        View view = inflater.inflate(R.layout.bookmark_market_fragment, container, false);
+        markets = new ArrayList<BookmarkMarket>();
 
-        marketArrayList = new ArrayList<Market>();
-        recyclerView = (RecyclerView) view.findViewById(R.id.market_recyclerView);
+        recyclerView = (RecyclerView) view.findViewById(R.id.bookmark_market_recyclerView);
         layoutManager = new LinearLayoutManager(this.getContext());
         recyclerView.setLayoutManager(layoutManager);
-        marketRecyclerViewAdapter = new MarketRecyclerViewAdapter(marketArrayList, getActivity());
+        marketRecyclerViewAdapter = new BookmarkMarketRecyclerViewAdapter(markets, getActivity());
         recyclerView.setAdapter(marketRecyclerViewAdapter);
-
         return view;
     }
 }

@@ -2,17 +2,19 @@ package com.example.manzbuy;
 
 public class BookmarkItem {
     private String itemImageUrl;
+    private String itemMarketImageUrl;
     private String marketName;
     private String itemName;
     private String itemPrice;
-    private int itemQuantity;
+    private boolean itemBookmark;
 
-    public BookmarkItem(String itemImageUrl, String marketName, String itemName, String itemPrice, int itemQuantity) {
+    public BookmarkItem(String itemImageUrl, String itemMarketImageUrl, String marketName, String itemName, String itemPrice, boolean itemBookmark) {
         this.itemImageUrl = itemImageUrl;
+        this.itemMarketImageUrl = itemMarketImageUrl;
         this.marketName = marketName;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
-        this.itemQuantity = itemQuantity;
+        this.itemBookmark = itemBookmark;
     }
 
     public String getItemImageUrl() {
@@ -21,6 +23,14 @@ public class BookmarkItem {
 
     public void setItemImageUrl(String itemImageUrl) {
         this.itemImageUrl = itemImageUrl;
+    }
+
+    public String getItemMarketImageUrl() {
+        return itemMarketImageUrl;
+    }
+
+    public void setItemMarketImageUrl(String itemMarketImageUrl) {
+        this.itemMarketImageUrl = itemMarketImageUrl;
     }
 
     public String getMarketName() {
@@ -47,11 +57,11 @@ public class BookmarkItem {
         this.itemPrice = itemPrice;
     }
 
-    public int getItemQuantity() {
-        return itemQuantity;
+    public boolean isItemBookmark() {
+        return itemBookmark;
     }
 
-    public void setItemQuantity(int itemQuantity) {
-        this.itemQuantity = itemQuantity;
+    public void setItemBookmark(boolean itemBookmark) {
+        this.itemBookmark = itemBookmark;
     }
 }
