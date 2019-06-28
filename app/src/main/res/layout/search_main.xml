@@ -24,6 +24,7 @@
             android:layout_marginBottom="10dp"/>
 
             <Button
+                android:id="@+id/main_search_btn"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_toRightOf="@+id/main_search_edit"

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:text="검색어"
+            android:id="@+id/search_more_edit"/>
+        <Button
+            android:id="@+id/search_more_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/search_more_edit"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/search"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/search_more_popular_sort"
+                android:layout_below="@+id/search_more_edit"
+                android:layout_toLeftOf="@+id/search_more_recent_sort"
+                android:layout_marginTop="15dp"
+                android:text="인기순"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/search_more_recent_sort"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@+id/search_more_edit"
+                android:layout_marginTop="15dp"
+                android:layout_alignRight="@+id/search_more_edit"
+                android:text="최신순"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/search_more_price_sort"
+                android:layout_toRightOf="@+id/search_more_recent_sort"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@+id/search_more_edit"
+                android:layout_marginTop="15dp"
+                android:text="낮은 가격순"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_more_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_more_popular_sort"
+            android:layout_marginTop="30dp">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
