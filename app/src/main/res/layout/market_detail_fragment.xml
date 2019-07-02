@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:nestedScrollingEnabled="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+                <ImageView
+                    android:id="@+id/market_detailpage_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="#bdbdbd"/>
+                
+                <TextView
+                    android:id="@+id/market_detailpage_marketName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/market_detailpage_image"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="마켓명"
+                    android:textSize="35dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/market_detailpage_marketTag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/market_detailpage_marketName"
+                    android:layout_marginLeft="20dp"
+                    android:text="#마켓설명"
+                    android:textSize="18dp"
+                    android:textColor="#424242"/>
+
+                <TextView
+                    android:id="@+id/market_detailpage_marketTag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/market_detailpage_marketName"
+                    android:layout_toRightOf="@+id/market_detailpage_marketTag1"
+                    android:layout_marginLeft="10dp"
+                    android:text="#마켓설명"
+                    android:textSize="18dp"
+                    android:textColor="#424242"/>
+
+                <CheckBox
+                    android:id="@+id/market_detailpage_bookmark"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_below="@+id/market_detailpage_image"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/market_bookmark"
+                    android:button="@null"/>
+
+                <TextView
+                    android:id="@+id/market_detailpage_bookmark_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/market_detailpage_bookmark"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="좋아요 숫자"/>
+
+                <TextView
+                    android:id="@+id/market_detailpage_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/market_detailpage_marketTag1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="마켓설명"/>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/market_detailpage_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/market_detailpage_info"
+                    android:layout_marginTop="10dp"
+                    app:tabIndicatorColor="#424242">
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/market_detailpage_tab_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="상품"/>
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/market_detailpage_tab_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="후기"/>
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/market_detailpage_tab_ask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="문의"/>
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/market_detailpage_tab_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="공지"/>
+
+                </android.support.design.widget.TabLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/market_detailpage_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/market_detailpage_tab">
+                </android.support.v4.view.ViewPager>
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+    
+
+</android.support.constraint.ConstraintLayout>

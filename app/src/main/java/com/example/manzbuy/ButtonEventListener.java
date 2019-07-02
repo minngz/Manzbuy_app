@@ -1,9 +1,10 @@
 package com.example.manzbuy;
 
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class ButtonEventListener implements Button.OnClickListener{
+public class ButtonEventListener implements OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
