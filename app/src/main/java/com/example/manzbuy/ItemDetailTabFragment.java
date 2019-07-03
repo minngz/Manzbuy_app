@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class DetailMarketTabFragment extends Fragment {
+public class ItemDetailTabFragment extends Fragment {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -18,12 +18,12 @@ public class DetailMarketTabFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.market_detail_fragment, container, false);
+        View view = inflater.inflate(R.layout.item_detail_fragment, container, false);
 
-        tabLayout = (TabLayout)view.findViewById(R.id.market_detailpage_tab);
-        viewPager = (ViewPager)view.findViewById(R.id.market_detailpage_viewPager);
+        tabLayout = (TabLayout)view.findViewById(R.id.item_detailpage_tab);
+        viewPager = (ViewPager)view.findViewById(R.id.item_detailpage_viewPager);
 
-        MarketDetailViewPagerAdapter adapter = new MarketDetailViewPagerAdapter(getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
+        ItemDetailViewPagerAdapter adapter = new ItemDetailViewPagerAdapter(getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
