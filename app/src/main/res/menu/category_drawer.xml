@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_sale"
+        android:title="세일 sale" />
+    <item
+        android:id="@+id/item_outer"
+        android:title="아우터 outer" />
+    <item
+        android:id="@+id/item_top"
+        android:title="상의 top" />
+    <item
+        android:id="@+id/item_bottom"
+        android:title="하의 bottom" />
+    <item
+        android:id="@+id/item_shoes"
+        android:title="신발 shoes" />
+    <item
+        android:id="@+id/item_bag"
+        android:title="가방 bag" />
+    <item
+        android:id="@+id/item_accessory"
+        android:title="잡화 accessory" />
+    <item
+        android:id="@+id/item_headwear"
+        android:title="모자 headwear" />
+    <item
+        android:id="@+id/item_underwear"
+        android:title="속옷 underwear" />
+    <item
+        android:id="@+id/item_beachwear"
+        android:title="비치웨어 beachwear" />
+
+</menu>
