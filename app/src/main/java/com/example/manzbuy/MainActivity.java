@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         homeTapLayout.addTab(homeTapLayout.newTab().setText("Best"));
         homeTapLayout.addTab(homeTapLayout.newTab().setText("Event"));
 
-        viewPager = (ViewPager)findViewById(R.id.home_pager_content);
+        viewPager = (ViewPager)findViewById(R.id.home_viewpager);
         homePagerAdapter = new HomePagerAdapter(getSupportFragmentManager(), homeTapLayout.getTabCount());
         viewPager.setAdapter(homePagerAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(homeTapLayout));
