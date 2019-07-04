@@ -46,35 +46,47 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //App Bar의 좌측 영영에 Drawer를 Open 하기 위한 Icon 추가
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.mipmap.ic_launcher);
+        if(getSupportActionBar()!=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.mipmap.ic_launcher);
+        }
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setHomeAsUpIndicator(R.mipmap.ic_launcher);
 
-        DrawerLayout drawLayout = (DrawerLayout) findViewById(R.id.category_layout);
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.category_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(
                 this,
-                drawLayout,
+                drawerLayout,
                 toolbar,
                 R.string.drawer_open,
                 R.string.drawer_close
         );
 
-        drawLayout.addDrawerListener(actionBarDrawerToggle);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId())
                 {
-                    case R.id.item_sale:
-                    case R.id.item_outer:
-                    case R.id.item_top:
+                    case R.id.item_sale: break;
+                    case R.id.item_outer: break;
+                    case R.id.item_top: break;
+                    case R.id.item_bottom: break;
+                    case R.id.item_shoes: break;
+                    case R.id.item_bag: break;
+                    case R.id.item_accessory: break;
+                    case R.id.item_headwear: break;
+                    case R.id.item_underwear: break;
+                    case R.id.item_beachwear: break;
                 }
 
                 DrawerLayout drawer = findViewById(R.id.category_layout);
                 drawer.closeDrawer(GravityCompat.START);
-                return true;
+                return false; //true?
             }
         });
 
