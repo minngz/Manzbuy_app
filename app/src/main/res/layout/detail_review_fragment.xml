@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/detail_photoReview_more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="> 포토후기 모아보기"
+            android:textSize="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/detail_photoReview_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_below="@+id/detail_photoReview_more_btn"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/detail_writeReview_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_photoReview_recyclerView"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="28dp"
+            android:layout_alignParentRight="true"
+            android:text="> 후기 작성하기"
+            android:textSize="18dp"/>
+
+        <View
+            android:id="@+id/detail_writeReview_seperator"
+            android:layout_width="370dp"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/detail_writeReview_btn"
+            android:background="#424242"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/detail_writeReview_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_writeReview_seperator"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="28dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

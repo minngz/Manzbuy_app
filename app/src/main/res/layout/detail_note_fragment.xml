@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/detail_deliveryNote_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:text="배송정보"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <View
+                android:id="@+id/detail_deliveryNote_seperator"
+                android:layout_width="370dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@+id/detail_deliveryNote_text"
+                android:background="#424242"/>
+
+            <TextView
+                android:id="@+id/detail_deliveryNote_contents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_deliveryNote_seperator"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="25dp"
+                android:text="contents"
+                android:textSize="18dp"/>
+
+
+            <TextView
+                android:id="@+id/detail_exchangeNote_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_deliveryNote_contents"
+                android:layout_marginTop="15dp"
+                android:layout_alignLeft="@+id/detail_deliveryNote_text"
+                android:text="교환,환불 안내"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <View
+                android:id="@+id/detail_exchangeNote_seperator"
+                android:layout_width="370dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@+id/detail_exchangeNote_text"
+                android:background="#424242"/>
+
+            <TextView
+                android:id="@+id/detail_exchangeNote_contents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_exchangeNote_seperator"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="25dp"
+                android:text="contents"
+                android:textSize="18dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
