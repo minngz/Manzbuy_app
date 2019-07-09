@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:nestedScrollingEnabled="false">
+        android:id="@+id/item_detailpage_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -143,6 +143,7 @@
                 android:id="@+id/item_detailpage_tab"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
                 android:layout_below="@+id/item_detailpage_eventAd"
                 app:tabIndicatorColor="#424242">
 
@@ -172,15 +173,23 @@
 
             </android.support.design.widget.TabLayout>
 
-            <android.support.v4.view.ViewPager
+            <com.example.manzbuy.MeasuredViewPager
                 android:id="@+id/item_detailpage_viewPager"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/item_detailpage_tab">
-            </android.support.v4.view.ViewPager>
+                android:layout_below="@+id/item_detailpage_tab">>
+
+            </com.example.manzbuy.MeasuredViewPager>
+
+            <!--<android.support.v4.view.ViewPager-->
+                <!--android:id="@+id/item_detailpage_viewPager"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/item_detailpage_tab">-->
+            <!--</android.support.v4.view.ViewPager>-->
 
         </RelativeLayout>
 
     </ScrollView>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 public class DetailMarketTabFragment extends Fragment {
 
@@ -30,6 +31,7 @@ public class DetailMarketTabFragment extends Fragment {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                resizePager(tab.getPosition());
                 viewPager.setCurrentItem(tab.getPosition());
             }
 
@@ -44,5 +46,15 @@ public class DetailMarketTabFragment extends Fragment {
             }
         });
         return view;
+    }
+    public void resizePager(int position){
+        View view = viewPager.findViewWithTag(position);
+        if(view == null)
+            return;
+        view.measure(ViewPager.LayoutParams.WRAP_CONTENT, ViewPager.LayoutParams.WRAP_CONTENT);
+        int width = view.getMeasuredWidth();
+        int height = view.getMeasuredHeight();
+
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(width, height);
     }
 }

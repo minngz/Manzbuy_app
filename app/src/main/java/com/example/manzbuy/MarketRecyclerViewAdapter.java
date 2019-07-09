@@ -15,6 +15,13 @@ import java.util.ArrayList;
 public class MarketRecyclerViewAdapter extends RecyclerView.Adapter<MarketRecyclerViewAdapter.ViewHolder> {
     private ArrayList<Market> markets;
     private Context marketContext;
+    private MarketFragment fragment;
+
+    public MarketRecyclerViewAdapter(ArrayList<Market> markets, Context marketContext, MarketFragment fragment) {
+        this.markets = markets;
+        this.marketContext = marketContext;
+        this.fragment = fragment;
+    }
 
     public MarketRecyclerViewAdapter(ArrayList<Market> markets, Context marketContext) {
         this.markets = markets;
@@ -59,6 +66,8 @@ public class MarketRecyclerViewAdapter extends RecyclerView.Adapter<MarketRecycl
         ImageView marketImage3;
         Button marketBookmark;
 
+        private DetailMarketTabFragment detailMarketTabFragment = new DetailMarketTabFragment();
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -73,7 +82,8 @@ public class MarketRecyclerViewAdapter extends RecyclerView.Adapter<MarketRecycl
 
         @Override
         public void onClick(View v) {
-
+//            fragmentLayout -> MainActivity에서 fragment가 나오는 공간의 frame 부분임.
+//            fragment.getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentLayout, detailMarketTabFragment).commitAllowingStateLoss();
         }
     }
 }

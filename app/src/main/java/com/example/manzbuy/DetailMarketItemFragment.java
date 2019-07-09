@@ -22,7 +22,7 @@ public class DetailMarketItemFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.item_detail_fragment, container, false);
+        View view = inflater.inflate(R.layout.detail_market_item_recycler, container, false);
 
         itemArrays = new ArrayList<DetailMarketItemArray>();
         recyclerView = (RecyclerView)view.findViewById(R.id.market_detailpage_itemRecyclerView);
