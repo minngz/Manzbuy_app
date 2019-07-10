@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/shoppingcart_frame_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/shoppingcart_frame_item_recyclerview"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/shoppingcart_frame_item_selector1"
+                android:layout_width="370dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/shoppingcart_frame_item_recyclerview"
+                android:background="#aa424242"/>
+
+            <CheckBox
+                android:id="@+id/shoppingcart_frame_item_allSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shoppingcart_frame_item_selector1"
+                android:text="전체 선택"
+                android:layout_alignLeft="@+id/shoppingcart_frame_item_selector1"/>
+
+            <TextView
+                android:id="@+id/shoppingcart_frame_item_deleteSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/shoppingcart_frame_item_selector1"
+                android:layout_below="@+id/shoppingcart_frame_item_selector1"
+                android:layout_marginTop="6dp"
+                android:text="선택 삭제" />
+
+            <TextView
+                android:id="@+id/shoppingcart_frame_item_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shoppingcart_frame_item_allSelect"
+                android:layout_alignLeft="@+id/shoppingcart_frame_item_allSelect"
+                android:layout_marginTop="15dp"
+                android:text="장바구니 합계"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/shoppingcart_frame_item_selector2"
+                android:layout_width="370dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="7dp"
+                android:layout_below="@id/shoppingcart_frame_item_sum"
+                android:background="#424242"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/shoppingcart_frame_item_sum_recyclerview"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/shoppingcart_frame_item_selector2"
+                android:layout_below="@+id/shoppingcart_frame_item_selector2">
+
+            </android.support.v7.widget.RecyclerView>
+            
+            <Button
+                android:id="@+id/shoppingcart_frame_item_buy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#424242"
+                android:layout_below="@id/shoppingcart_frame_item_sum_recyclerview"
+                android:layout_marginTop="15dp"
+                android:text="결제하기"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
