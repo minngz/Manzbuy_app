@@ -32,7 +32,7 @@ public class ShoppingcartFragment extends Fragment {
         itemRecyclerViewAdapter = new ShoppingcartItemRecyclerViewAdapter(shoppingcartItems, this.getContext());
         textItemRecyclerViewAdapter = new ShoppingcartTextItemRecyclerViewAdapter(shoppingcartTextItems, this.getContext());
 
-        
+
         return view;
     }
 }

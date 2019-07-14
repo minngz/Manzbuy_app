@@ -21,7 +21,7 @@
                 android:text="마이 페이지"
                 android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="35dp"/>
+                android:textSize="20dp"/>
         </FrameLayout>
 
         <ScrollView

@@ -4,11 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
         <FrameLayout
+            android:id="@+id/bookmark_header_framge"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:textAlignment="center">
@@ -17,33 +14,39 @@
                 android:layout_height="wrap_content"
                 android:text="찜"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:textColor="#000000"
                 android:layout_gravity="center"/>
         </FrameLayout>
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bookmark_nav_view"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="?android:attr/windowBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:menu="@menu/bookmark_nav_menu"
-            app:elevation="0dp"
-            app:labelVisibilityMode="labeled"/>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/bookmark_tablayout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookmark_header_framge"
+        android:layout_centerHorizontal="true"
+        app:tabIndicatorColor="#424242">
 
-        <FrameLayout
-            android:id="@+id/bookmark_fragment_layout"
-            android:layout_width="match_parent"
-            android:layout_height="616dp"
-            android:layout_marginTop="5dp">
+        <android.support.design.widget.TabItem
+            android:id="@+id/bookmark_tab_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상품"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/bookmark_tab_market"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마켓"/>
 
-        </FrameLayout>
+    </android.support.design.widget.TabLayout>
 
-    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/bookmark_tab_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookmark_tablayout"
+        android:layout_marginTop="10dp">
 
+    </android.support.v4.view.ViewPager>
 
 </RelativeLayout>
